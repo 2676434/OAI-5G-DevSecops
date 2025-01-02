@@ -130,7 +130,7 @@ services:
                 ipv4_address: 192.168.70.139
     oai-upf:
         container_name: "oai-upf"
-        image: oaisoftwarealliance/oai-upf:develop
+        image: tariromukute/oai-upf:qos-2
         expose:
             - 2152/udp
             - 8805/udp
