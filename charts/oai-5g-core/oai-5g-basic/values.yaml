@@ -17,8 +17,8 @@ mysql:
 oai-nrf:
   enabled: true
   nfimage:  # image name either locally present or in a public/private repository
-    repository: docker.io/oaisoftwarealliance/oai-nrf          ## The image will be pulled from dockerhub
-    version: v2.1.0                          ## The branch to be used to pull from dockerhub
+    repository: harbor-registry.hub-cluster.example.com/oai/oai-nrf          ## The image will be pulled from dockerhub
+    version: latest-oai                          ## The branch to be used to pull from dockerhub
     # pullPolicy: IfNotPresent or Never or Always
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
@@ -39,8 +39,8 @@ oai-nrf:
 oai-lmf:
   enabled: true
   nfimage:  # image name either locally present or in a public/private repository
-    repository: docker.io/oaisoftwarealliance/oai-lmf          ## The image will be pulled from dockerhub
-    version: v2.1.0                          ## The branch to be used to pull from dockerhub
+    repository: harbor-registry.hub-cluster.example.com/oai/oai-lmf          ## The image will be pulled from dockerhub
+    version: latest-oai                          ## The branch to be used to pull from dockerhub
     # pullPolicy: IfNotPresent or Never or Always
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
@@ -57,8 +57,8 @@ oai-lmf:
 oai-udr:
   enabled: true
   nfimage:  # image name either locally present or in a public/private repository
-    repository: docker.io/oaisoftwarealliance/oai-udr           ## The image will be pulled from dockerhub
-    version: v2.1.0                                    ## The branch to be used to pull from dockerhub
+    repository: harbor-registry.hub-cluster.example.com/oai/oai-udr           ## The image will be pulled from dockerhub
+    version: latest-oai                                    ## The branch to be used to pull from dockerhub
     # pullPolicy: IfNotPresent or Never or Always
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
@@ -76,8 +76,8 @@ oai-udr:
 oai-udm:
   enabled: true
   nfimage:  # image name either locally present or in a public/private repository
-    repository: docker.io/oaisoftwarealliance/oai-udm           ## The image will be pulled from dockerhub
-    version: v2.1.0                                    ## The branch to be used to pull from dockerhub
+    repository: harbor-registry.hub-cluster.example.com/oai/oai-udm           ## The image will be pulled from dockerhub
+    version: latest-oai                                    ## The branch to be used to pull from dockerhub
     # pullPolicy: IfNotPresent or Never or Always
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
@@ -95,8 +95,8 @@ oai-udm:
 oai-ausf:
   enabled: true
   nfimage:  # image name either locally present or in a public/private repository
-    repository: docker.io/oaisoftwarealliance/oai-ausf           ## The image will be pulled from dockerhub
-    version: v2.1.0                                    ## The branch to be used to pull from dockerhub
+    repository: harbor-registry.hub-cluster.example.com/oai/oai-ausf           ## The image will be pulled from dockerhub
+    version: latest-oai                                    ## The branch to be used to pull from dockerhub
     # pullPolicy: IfNotPresent or Never or Always
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
@@ -114,8 +114,8 @@ oai-ausf:
 oai-amf:
   enabled: true
   nfimage:  # image name either locally present or in a public/private repository
-    repository: docker.io/oaisoftwarealliance/oai-amf           ## The image will be pulled from dockerhub
-    version: v2.1.0                                    ## The branch to be used to pull from dockerhub
+    repository: harbor-registry.hub-cluster.example.com/oai/oai-amf           ## The image will be pulled from dockerhub
+    version: latest-oai                                    ## The branch to be used to pull from dockerhub
     # pullPolicy: IfNotPresent or Never or Always
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
@@ -144,8 +144,8 @@ oai-amf:
 oai-upf:
   enabled: true
   nfimage:  # image name either locally present or in a public/private repository
-    repository: docker.io/oaisoftwarealliance/oai-upf    ## The image will be pulled from dockerhub
-    version: v2.1.0                                    ## The branch to be used to pull from dockerhub
+    repository: harbor-registry.hub-cluster.example.com/oai/oai-upf    ## The image will be pulled from dockerhub
+    version: latest-oai                                    ## The branch to be used to pull from dockerhub
     # pullPolicy: IfNotPresent or Never or Always
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
@@ -159,7 +159,7 @@ oai-upf:
     - name: "regcred"
   # create an extra interface for N3 incase the gNB is outside the cluster network or there is a need to have dedicated interface for N3
   ## Change these ip-addresses according to your environment
-  ## N4, N6 are optional only if you want that UPF uses different subnets for different 3gpp interfaces. 
+  ## N4, N6 are optional only if you want that UPF uses different subnets for different 3gpp interfaces.
   multus:
     ## If you don't want to add a default route in your pod then replace this field with ""
     defaultGateway: ""
@@ -199,8 +199,8 @@ oai-upf:
 oai-traffic-server:
   enabled: true
   trafficServer:
-    repository: docker.io/oaisoftwarealliance/trf-gen-cn5g
-    version: latest
+    repository: harbor-registry.hub-cluster.example.com/oai/trf-gen-cn5g
+    version: latest-oai
     #pullPolicy: IfNotPresent or Never or Always
     pullPolicy: IfNotPresent
   multus:
@@ -227,8 +227,8 @@ oai-traffic-server:
 oai-smf:
   enabled: true
   nfimage:  # image name either locally present or in a public/private repository
-    repository: docker.io/oaisoftwarealliance/oai-smf           ## The image will be pulled from dockerhub
-    version: v2.1.0                         ## The branch to be used to pull from dockerhub
+    repository: harbor-registry.hub-cluster.example.com/oai/oai-smf           ## The image will be pulled from dockerhub
+    version: latest-oai                         ## The branch to be used to pull from dockerhub
     # pullPolicy: IfNotPresent or Never or Always
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
@@ -255,3 +255,4 @@ oai-smf:
   imagePullSecrets:
     - name: "regcred"
   nodeSelector: {}
+    # values.yaml
