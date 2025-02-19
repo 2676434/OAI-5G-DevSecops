@@ -3,7 +3,7 @@ kubernetesDistribution: Vanilla  #Vanilla for community kubernetes distribution 
 ## In case of using these charts on Openshift then please use UBI images
 ## To know more about them follow this tutorial https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed/-/tree/master/openshift
 nfimage:
-  repository: harbor-registry.hub-cluster.example.com/oai//oai-lmf
+  repository: harbor-registry.hub-cluster.example.com/oai/oai-lmf
   version: latest-oai #image tag, develop tag for experimental features 
   # pullPolicy: IfNotPresent or Never or Always
   pullPolicy: IfNotPresent
