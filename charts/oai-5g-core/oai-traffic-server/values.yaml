@@ -5,8 +5,8 @@ podSecurityContext:
   runAsGroup: 0
 
 trafficServer:
-  repository: docker.io/oaisoftwarealliance/trf-gen-cn5g
-  version: latest
+  repository: harbor-registry.hub-cluster.example.com/oai/trf-gen-cn5g
+  version: latest-oai
   #pullPolicy: IfNotPresent or Never or Always
   pullPolicy: IfNotPresent
 
