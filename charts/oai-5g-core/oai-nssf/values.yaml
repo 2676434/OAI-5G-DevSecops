@@ -1,8 +1,8 @@
 kubernetesDistribution: Vanilla  # Vanilla (Community Kubernetes) or Openshift (For RedHat Openshift)
 
 nfimage:
-  repository: docker.io/oaisoftwarealliance/oai-nssf # image name either locally present or in a public/private repository
-  version: develop #image tag, develop tag for experimental features 
+  repository: harbor-registry.hub-cluster.example.com/oai//oai-nssf # image name either locally present or in a public/private repository
+  version: latest-oai #image tag, develop tag for experimental features 
   #pullPolicy: IfNotPresent or Never or Always
   pullPolicy: IfNotPresent
 
