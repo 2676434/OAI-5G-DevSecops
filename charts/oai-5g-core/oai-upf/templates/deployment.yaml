@@ -17,6 +17,7 @@ spec:
         {{- include "oai-upf.selectorLabels" . | nindent 8 }}
     {{- if .Values.multus.n3Interface.create }}
       annotations:
+        sidecar.istio.io/inject: "true"
         k8s.v1.cni.cncf.io/networks: >-
           [{
           {{- if .Values.multus.n3Interface.create }}

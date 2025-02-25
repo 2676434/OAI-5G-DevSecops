@@ -41,3 +41,4 @@ subjects:
 - kind: ServiceAccount
   name: {{ .Chart.Name }}
   namespace: {{ .Release.Namespace }}
+

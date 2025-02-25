@@ -17,6 +17,7 @@ spec:
         {{- include "oai-amf.selectorLabels" . | nindent 8 }}
     {{- if .Values.multus.n2Interface.create }}
       annotations:
+        sidecar.istio.io/inject: "true"
         k8s.v1.cni.cncf.io/networks: >-
           [{
                  "name": "{{ .Chart.Name }}-{{ .Values.multus.n2Interface.name }}",

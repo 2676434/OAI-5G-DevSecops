@@ -32,6 +32,7 @@ roleRef:
   name: {{ .Chart.Name }}-{{ .Release.Namespace }}-role
   apiGroup: rbac.authorization.k8s.io
 {{- end }}
+
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
@@ -45,3 +46,4 @@ subjects:
 - kind: ServiceAccount
   name: {{ .Chart.Name }}
   namespace: {{ .Release.Namespace }}
+
