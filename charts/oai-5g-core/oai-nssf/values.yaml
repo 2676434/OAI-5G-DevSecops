@@ -1,4 +1,4 @@
-kubernetesDistribution: Vanilla  # Vanilla (Community Kubernetes) or Openshift (For RedHat Openshift)
+kubernetesDistribution: Openshift  # Vanilla (Community Kubernetes) or Openshift (For RedHat Openshift)
 
 nfimage:
   repository: harbor-registry.hub-cluster.example.com/oai/oai-nssf # image name either locally present or in a public/private repository
