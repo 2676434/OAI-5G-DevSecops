@@ -15,12 +15,12 @@ spec:
     type: Recreate
   template:
     metadata:
+      annotations:
+        sidecar.istio.io/inject: "true"
       labels:
         app.kubernetes.io/name: {{ .Chart.Name }}
         app.kubernetes.io/instance: {{ .Chart.Name }}
       {{- if .Values.multus.create }}
-      annotations:
-        sidecar.istio.io/inject: "true"
         k8s.v1.cni.cncf.io/networks: >-
               [{
                    "name": "{{ .Chart.Name }}-net1",
