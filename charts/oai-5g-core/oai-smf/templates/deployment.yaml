@@ -13,8 +13,8 @@ spec:
     type: Recreate
   template:
     metadata:
-      annotations:
-        sidecar.istio.io/inject: "true"
+      #annotations:
+      #  sidecar.istio.io/inject: "true"
       labels:
         {{- include "oai-smf.selectorLabels" . | nindent 8 }}
     {{- if .Values.multus.n4Interface.create }}
