@@ -9,7 +9,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: oai-5g-devsecops
+    name: git-repository
     namespace: flux-system
-  targetNamespace: oai-basic
+  targetNamespace: oai-basic1
 
