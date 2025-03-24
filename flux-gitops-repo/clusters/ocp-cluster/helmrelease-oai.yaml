@@ -1,0 +1,19 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: oai-5g-basic
+  namespace: oai-basic
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: charts/oai-5g-core/oai-5g-basic
+      sourceRef:
+        kind: GitRepository
+        name: oai-5g-devsecops
+        namespace: flux-system
+      version: '>=0.1.0'
+  values:
+    global:
+      namespace: oai-basic
+
