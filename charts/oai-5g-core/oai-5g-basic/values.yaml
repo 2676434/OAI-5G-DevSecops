@@ -5,7 +5,7 @@ global:
   waitForNRF: true
   waitForUDR: true
   http2Param: "--http2-prior-knowledge"  # if waitForNRF is true and http2 is used for all NF then this param is needed
-  timeout: 1
+  timeout: 2
 mysql:
   enabled: true
   imagePullPolicy: IfNotPresent
